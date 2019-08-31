@@ -7,3 +7,5 @@
 *pyc
 
 clients_photos/
+
+.env
