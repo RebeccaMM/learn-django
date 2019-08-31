@@ -1,15 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load bootstrap %}
+
+{% block title %} Página de login {% endblock %}
+
+{% block main %}
     <h2>Login</h2>
     <form method="post">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Login</button>
+        {{ form|bootstrap }}
+        <button type="submit" class="btn btn-info">Login</button>
     </form>
-</body>
-</html>
+{% endblock %}
+{% block footer %}
+    <footer class="footer">
+        <div class="container">
+            <span class="text-muted">Desenvolvido com <i class="fas fa-heart"></i> por <a href="https://github.com/RebeccaMM" class="alert-link">Rebecca Messias</a></span>
+        </div>
+    </footer>
+{% endblock %}
