@@ -6,6 +6,19 @@
     <div class="row">
         <div class="col-8">
             <h3>Listagem de clientes</h3>
+            <form action="" class="form-group">
+                <div class="row">
+                    <div class="col-5">
+                        <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite o nome"/>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" id="sobrenome" name="sobrenome" class="form-control" placeholder="Digite o sobrenome"/>
+                    </div>
+                    <div class="col-1">
+                        <button class="btn btn-sm btn-outline-primary">Pesquisar</button>
+                    </div>
+                </div>
+            </form>
             <ul class="list-group">
             {% for person in persons %}
                 <li class="list-group-item">
